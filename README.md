@@ -1,5 +1,11 @@
 # iotgs2tdsj
 
+# Integrantes :
+
+ - Gabriel Sun Gonçalo da Silva - RM: 88316
+ - Kleber Albert de Sousa Monteiro - RM: 88711
+ - Renato Miranda Esmail - RM: 86701
+
 ## Arduino
 
 Link do Tinkcard:
