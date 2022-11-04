@@ -1,4 +1,4 @@
-# iotgs2tdsj
+# GS-2TDSJ
 
 # Integrantes :
 
