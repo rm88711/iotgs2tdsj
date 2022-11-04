@@ -14,6 +14,9 @@ https://www.tinkercad.com/things/5hX5RJhnmAY-sizzling-migelo-snaget/editel
 
 Bibliotecas :
 
+- node-red-contrib-mqtt-broker
+- node-red-dashboard
+
 
 
 
