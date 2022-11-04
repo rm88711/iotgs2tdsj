@@ -1,0 +1,190 @@
+[
+    {
+        "id": "cb5eb9689839025a",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2dfd3729efc8f4b2",
+        "type": "inject",
+        "z": "cb5eb9689839025a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "A",
+        "payloadType": "str",
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "4838a916f6b97fe0"
+            ]
+        ]
+    },
+    {
+        "id": "11798eae7146303c",
+        "type": "inject",
+        "z": "cb5eb9689839025a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "B",
+        "payloadType": "str",
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "4838a916f6b97fe0"
+            ]
+        ]
+    },
+    {
+        "id": "c7599dd68108d387",
+        "type": "inject",
+        "z": "cb5eb9689839025a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "AB",
+        "payloadType": "str",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "4838a916f6b97fe0"
+            ]
+        ]
+    },
+    {
+        "id": "78a03014441035a7",
+        "type": "inject",
+        "z": "cb5eb9689839025a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "X",
+        "payloadType": "str",
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "4838a916f6b97fe0"
+            ]
+        ]
+    },
+    {
+        "id": "4838a916f6b97fe0",
+        "type": "function",
+        "z": "cb5eb9689839025a",
+        "name": "",
+        "func": "var resposta = msg.payload\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "894a5a7f8e58b0f9"
+            ]
+        ]
+    },
+    {
+        "id": "894a5a7f8e58b0f9",
+        "type": "mqtt out",
+        "z": "cb5eb9689839025a",
+        "name": "",
+        "topic": "piknik/1",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0ef1c432a7dba8cf",
+        "x": 660,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "0ef1c432a7dba8cf",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]

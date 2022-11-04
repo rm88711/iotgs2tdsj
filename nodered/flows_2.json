@@ -1,0 +1,131 @@
+[
+    {
+        "id": "51666db4309a0f10",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dae523cf41db6d58",
+        "type": "mqtt in",
+        "z": "51666db4309a0f10",
+        "name": "",
+        "topic": "piknik/1",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "0ef1c432a7dba8cf",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 70,
+        "y": 240,
+        "wires": [
+            [
+                "16acaf789b817525"
+            ]
+        ]
+    },
+    {
+        "id": "33fcdca12eb8bcf2",
+        "type": "debug",
+        "z": "51666db4309a0f10",
+        "name": "bug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "830fb669f18a8ea8",
+        "type": "ui_text",
+        "z": "51666db4309a0f10",
+        "group": "c141c8121bb48726",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "Texto",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 510,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "16acaf789b817525",
+        "type": "function",
+        "z": "51666db4309a0f10",
+        "name": "",
+        "func": "var partes = msg.payload.split(\"(\");\nmsg.key = partes[0];\nif (msg.key == \"A\") {\n    msg.payload = \"Somente a vaga A disponível.\"\n}\nif (msg.key == \"B\") {\n    msg.payload = \"Somente a vaga B disponível.\"\n}\nif (msg.key == \"AB\") {\n    msg.payload = \"Ambas as vagas disponíveis.\"\n}\nif (msg.key == \"X\") {\n    msg.payload = \"Nenhuma vaga disponível.\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 240,
+        "wires": [
+            [
+                "33fcdca12eb8bcf2",
+                "830fb669f18a8ea8"
+            ]
+        ]
+    },
+    {
+        "id": "0ef1c432a7dba8cf",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c141c8121bb48726",
+        "type": "ui_group",
+        "name": "Vaga",
+        "tab": "6ade38f5569e8d40",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6ade38f5569e8d40",
+        "type": "ui_tab",
+        "name": "VAGAS",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
