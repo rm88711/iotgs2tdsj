@@ -16,3 +16,5 @@ https://www.tinkercad.com/things/5hX5RJhnmAY-sizzling-migelo-snaget/editel
 Youtube :
 
 https://www.youtube.com/watch?v=fKtrhH_yOpg&t=1025s
+
+https://discourse.nodered.org/t/function-string-extract/6775/11
